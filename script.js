@@ -13,13 +13,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   console.log("button clicked!");
 
-
-
-
-
-
-
-  return "Password is being generated!";
+ return "Password is being generated!";
 }
 
 function getPrompt() {
@@ -57,10 +51,9 @@ function writePassword() {
         var passwordText = document.querySelector("#password");
 
         passwordText.value = password;
+    }
 
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
