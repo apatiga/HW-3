@@ -18,7 +18,8 @@ var password = "";
 for(var i = 0; i < characterLength; i++) {
   var randomIndex= Math.floor(Math.random() * choiceArr.length);
   password = password + choiceArr[randomIndex];
- return "Password is being generated!";
+}
+ return password;
 }
 
 function getPrompt() {
