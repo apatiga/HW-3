@@ -10,9 +10,14 @@ var numberArr = ['1','2','3,','4','5','6','7','8','9','0'];
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 function generatePassword() {
   console.log("button clicked!");
 
+var password = "";
+for(var i = 0; i < characterLength; i++) {
+  var randomIndex= Math.floor(Math.random() * choiceArr.length);
+  password = password + choiceArr[randomIndex];
  return "Password is being generated!";
 }
 
@@ -47,10 +52,12 @@ function writePassword() {
     var correctPrompts = getPrompt();
 
     if (correctPrompts) {
-        var password = generatePassword();
+        var newPassword = generatePassword();
         var passwordText = document.querySelector("#password");
 
-        passwordText.value = password;
+        passwordText.value = newPassword;
+    } else {
+      passwordTest.value = "";
     }
 
 }
